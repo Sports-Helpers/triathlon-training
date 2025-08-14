@@ -18,7 +18,7 @@
             <nav class="appbar-secondary-items">
                 <SecondaryItemIcon @click="userSessionStore.changeTheme(themeService, nextTheme)" :icon="themeIcon" />
 
-                <LanguageMenu />
+                <!--<LanguageMenu />-->
             </nav>
         </div>
     </header>
@@ -37,7 +37,6 @@ import SiteTitle from "@/components/appbar/SiteTitle.vue";
 import DrawerTrigger from "@/components/ui/drawer/DrawerTrigger.vue";
 import AppBarDrawer from "@/components/appbar/AppBarDrawer.vue";
 import SecondaryItemIcon from "@/components/appbar/SecondaryItemIcon.vue";
-import LanguageMenu from "@/components/appbar/LanguageMenu.vue";
 import { SUPPORTED_THEMES } from "@/services/themes/constants";
 import { useThemeService } from "@/services/themes/themeService";
 
