@@ -21,14 +21,14 @@ export class RouterInstance {
             // should be for the same language.
             routes: [
                 {
-                    path: MAPPED_ROUTES[RouteNames.HOME].path.en,
+                    path: MAPPED_ROUTES[RouteNames.HOME].path.fr,
                     alias: [MAPPED_ROUTES[RouteNames.HOME].path.fr],
                     name: MAPPED_ROUTES[RouteNames.HOME].name,
                     component: () => import("@/pages/Home.vue"),
                     beforeEnter: [],
                 },
                 {
-                    path: MAPPED_ROUTES[RouteNames.NOT_FOUND].path.en,
+                    path: MAPPED_ROUTES[RouteNames.NOT_FOUND].path.fr,
                     alias: [MAPPED_ROUTES[RouteNames.NOT_FOUND].path.fr],
                     name: MAPPED_ROUTES[RouteNames.NOT_FOUND].name,
                     component: () => import("@/pages/NotFound.vue"),

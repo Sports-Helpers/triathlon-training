@@ -1,4 +1,4 @@
-export type SupportedLocale = "fr" | "en";
+export type SupportedLocale = "fr" /*| "en"*/;
 
 export type SupportedLanguage<K extends SupportedLocale> = {
     locale: K;

@@ -1,6 +1,5 @@
 import { createI18n, type I18n } from "vue-i18n";
 import fr from "@/services/i18n/fr.json";
-import en from "@/services/i18n/en.json";
 import type { SupportedLocale } from "@/services/i18n/types";
 
 type TFunction = (key: string) => string;
@@ -17,7 +16,6 @@ export class I18nInstance {
         fallbackLocale: "fr",
         messages: {
             fr: fr,
-            en: en,
         },
     });
 

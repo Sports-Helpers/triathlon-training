@@ -9,7 +9,7 @@ describe("services/routing/routerInstance", () => {
     let routerInstance: RouterInstance;
     const ANY_PATH: string = "/any-path";
     const UNSUPPORTED_LOCALE: any = "unsup-locale";
-    const SUPPORTED_LOCALE: SupportedLocale = "en";
+    const SUPPORTED_LOCALE: SupportedLocale = "fr";
     const LOCALIZED_PATH: string = "/not-any-other-path";
     const ROUTE_INFO_WITH_LOCALIZED_PATH: any = {
         path: {
