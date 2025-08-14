@@ -1,0 +1,29 @@
+{
+    "navigation": {
+        "home": {
+            "displayed_name": "Tableau de bord",
+            "head_title": "Vue Template - Description page d'accueil",
+            "meta": "Petite description ici pour page d'accueil"
+        },
+        "about": {
+            "displayed_name": "À propos",
+            "head_title": "Vue Template - Description page à propos",
+            "meta": "Petite description ici pour page à propos"
+        },
+        "not_found": {
+            "displayed_name": "Oups!",
+            "head_title": "Vue Template - Description page introuvable",
+            "meta": "Petite description ici pour page introuvable"
+        },
+        "languages": {
+            "displayed_name": "Langues"
+        }
+    },
+    "pages": {
+        "not_found": {
+            "description": "Page introuvable",
+            "go_home_button": "Aller à l'accueil",
+            "go_back_button": "Retourner sur mes pas"
+        }
+    }
+}

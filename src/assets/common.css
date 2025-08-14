@@ -1,0 +1,26 @@
+/*
+    Phones
+*/
+@media screen and (max-width: 599px) {
+}
+
+/*
+  Tablets and computers
+*/
+@media screen and (min-width: 600px) {
+}
+
+.close-drawer-icon {
+    @apply w-7 h-7 px-1 py-1 ml-auto cursor-pointer;
+}
+
+/*
+  Hack to enable cursor pointer on buttons since shadcn removed this very useful feature:
+  https://github.com/shadcn-ui/ui/issues/6843 
+*/
+@layer base {
+    button,
+    [role="button"] {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,33 @@
+name: Setup Node and Dependencies for Project
+description: Shared steps to set up a Node.js project and its dependencies, including caching
+
+runs:
+    using: "composite"
+    steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node
+          uses: actions/setup-node@v4
+
+        - name: Cache Dependencies
+          uses: actions/cache@v4
+          env:
+              cache-name: cache-node-modules
+          with:
+              path: ~/.npm
+              key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+              restore-keys: |
+                  ${{ runner.os }}-build-${{ env.cache-name }}-
+                  ${{ runner.os }}-build-
+                  ${{ runner.os }}-
+
+        - name: Install Dependencies
+          run: npm ci
+          shell: bash
+
+        - name: Setup .env
+          run: |
+              touch .env
+              echo VITE_APP_URL=http://localhost:5173 >> .env
+          shell: bash

@@ -1,0 +1,82 @@
+/*
+    Phones
+*/
+@media screen and (max-width: 599px) {
+}
+
+/*
+  Tablets and computers
+*/
+@media screen and (min-width: 600px) {
+}
+.appbar-container {
+    max-width: 1400px;
+    @apply mx-auto h-12 px-4 flex items-center flex-nowrap;
+}
+
+.header {
+    @apply sticky top-0 z-1000 shadow;
+}
+
+.appbar-main {
+    @apply flex items-center;
+}
+
+.appbar-links {
+    @apply hidden md:flex items-center;
+}
+
+.appbar-link {
+    @apply px-3 py-2;
+}
+
+.appbar-link-on-current-page {
+    opacity: 1;
+}
+
+.appbar-link-not-on-current-page {
+    transition: opacity 0.15s ease-in-out;
+    opacity: 0.8;
+}
+
+.appbar-link-not-on-current-page:hover {
+    opacity: 1;
+}
+
+.appbar-link-site-title {
+    @apply text-blue-400 font-semibold text-lg;
+}
+
+.appbar-secondary-items {
+    @apply flex flex-1 items-center justify-end space-x-1;
+}
+
+.appbar-secondary-item {
+    @apply px-2 py-2;
+}
+
+.appbar-secondary-item-clickable {
+    @apply rounded-lg cursor-pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.appbar-secondary-item-clickable:hover {
+    background-color: var(--navbar-btn-hover-bg);
+}
+
+.appbar-secondary-item-icon {
+    @apply transition w-5 h-5;
+}
+
+.hamburger-container {
+    @apply px-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.hamburger-container:hover {
+    background-color: var(--navbar-btn-hover-bg);
+}
+
+.hamburger {
+    @apply transition w-5 h-5;
+}
