@@ -24,23 +24,6 @@ export const MAPPED_ROUTES: MappedRoutes = {
             ],
         },
     },
-    [RouteNames.ABOUT]: {
-        name: RouteNames.ABOUT,
-        path: RoutePaths.ABOUT,
-        displayedName: "navigation.about.displayed_name",
-        requiresAuth: false,
-        hideOnAuth: false,
-        addToSiteMap: true,
-        head: {
-            title: "navigation.about.head_title",
-            meta: [
-                {
-                    name: "description",
-                    content: "navigation.about.meta",
-                },
-            ],
-        },
-    },
     [RouteNames.NOT_FOUND]: {
         name: RouteNames.NOT_FOUND,
         path: RoutePaths.NOT_FOUND,
@@ -68,7 +51,6 @@ export const MAPPED_ROUTES: MappedRoutes = {
 export const GROUPED_ROUTES: GroupedRoutes = {
     GENERAL: {
         [RouteNames.HOME]: MAPPED_ROUTES[RouteNames.HOME],
-        [RouteNames.ABOUT]: MAPPED_ROUTES[RouteNames.ABOUT],
     },
     ORPHAN: {
         [RouteNames.NOT_FOUND]: MAPPED_ROUTES[RouteNames.NOT_FOUND],
@@ -78,4 +60,4 @@ export const GROUPED_ROUTES: GroupedRoutes = {
 /**
  * Core routes to be displayed in the AppBar / its associated drawer on mobile.
  */
-export const CORE_ROUTES: RouteInfo[] = [MAPPED_ROUTES[RouteNames.HOME], MAPPED_ROUTES[RouteNames.ABOUT]] as const;
+export const CORE_ROUTES: RouteInfo[] = [MAPPED_ROUTES[RouteNames.HOME]] as const;

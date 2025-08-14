@@ -28,13 +28,6 @@ export class RouterInstance {
                     beforeEnter: [],
                 },
                 {
-                    path: MAPPED_ROUTES[RouteNames.ABOUT].path.en,
-                    alias: [MAPPED_ROUTES[RouteNames.ABOUT].path.fr],
-                    name: MAPPED_ROUTES[RouteNames.ABOUT].name,
-                    component: () => import("@/pages/About.vue"),
-                    beforeEnter: [],
-                },
-                {
                     path: MAPPED_ROUTES[RouteNames.NOT_FOUND].path.en,
                     alias: [MAPPED_ROUTES[RouteNames.NOT_FOUND].path.fr],
                     name: MAPPED_ROUTES[RouteNames.NOT_FOUND].name,

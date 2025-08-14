@@ -34,7 +34,7 @@ export type MappedRoutes = {
 /**
  * One-to-one correspondance with RouteNames
  */
-type GeneralRoutes = typeof RouteNames.HOME | typeof RouteNames.ABOUT;
+type GeneralRoutes = typeof RouteNames.HOME;
 
 /**
  * One-to-one correspondance with RouteNames

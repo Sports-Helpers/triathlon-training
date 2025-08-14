@@ -5,8 +5,8 @@ export const SUPPORTED_LANGUAGES: SupportedLanguages = {
         locale: "fr",
         label: "Français",
     },
-    en: {
-        locale: "en",
-        label: "English",
-    },
+    //    en: {
+    //        locale: "en",
+    //        label: "English",
+    //    },
 } as const;

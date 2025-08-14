@@ -2,27 +2,25 @@
     "navigation": {
         "home": {
             "displayed_name": "Tableau de bord",
-            "head_title": "Vue Template - Description page d'accueil",
-            "meta": "Petite description ici pour page d'accueil"
-        },
-        "about": {
-            "displayed_name": "À propos",
-            "head_title": "Vue Template - Description page à propos",
-            "meta": "Petite description ici pour page à propos"
+            "head_title": "Triathlon Training - Tableau de bord",
+            "meta": "Brique par brique, continue."
         },
         "not_found": {
             "displayed_name": "Oups!",
-            "head_title": "Vue Template - Description page introuvable",
-            "meta": "Petite description ici pour page introuvable"
+            "head_title": "Triathlon Training - Page introuvable",
+            "meta": "La page recherchée n'a pas été trouvée."
         },
         "languages": {
             "displayed_name": "Langues"
         }
     },
     "pages": {
+        "home": {
+            "description": "Brique par brique, continue."
+        },
         "not_found": {
             "description": "Page introuvable",
-            "go_home_button": "Aller à l'accueil",
+            "go_home_button": "Aller au tableau de bord",
             "go_back_button": "Retourner sur mes pas"
         }
     }

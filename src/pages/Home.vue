@@ -1,7 +1,9 @@
 <template>
-    <h1 class="text-3xl font-bold underline">
-        {{ $t("navigation.home.displayed_name") }}
-    </h1>
+    <div class="px-6 py-6">
+        <h1 class="text-4xl text-center">
+            {{ $t("pages.home.description") }}
+        </h1>
+    </div>
 </template>
 
 <script setup lang="ts"></script>

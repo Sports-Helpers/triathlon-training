@@ -44,7 +44,8 @@
 }
 
 .appbar-link-site-title {
-    @apply text-blue-400 font-semibold text-lg;
+    @apply font-semibold text-lg;
+    color: #db143a;
 }
 
 .appbar-secondary-items {

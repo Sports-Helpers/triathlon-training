@@ -8,7 +8,7 @@
                     </DrawerTrigger>
                 </AppBarDrawer>
 
-                <SiteTitle displayed-text="App Name" :route-name="MAPPED_ROUTES[RouteNames.HOME].name" />
+                <SiteTitle displayed-text="Triathlon Training" :route-name="MAPPED_ROUTES[RouteNames.HOME].name" />
             </nav>
 
             <nav class="appbar-links">
@@ -16,14 +16,6 @@
             </nav>
 
             <nav class="appbar-secondary-items">
-                <SecondaryItemLink
-                    :icon="UserIcon"
-                    :route-info="MAPPED_ROUTES[RouteNames.HOME]"
-                    :is-authenticated="isAuthenticated"
-                />
-
-                <SecondaryItemIcon @click="" :icon="Cog8ToothIcon" />
-
                 <SecondaryItemIcon @click="userSessionStore.changeTheme(themeService, nextTheme)" :icon="themeIcon" />
 
                 <LanguageMenu />
@@ -37,10 +29,8 @@ import { useUserSessionStore } from "@/stores/user/userSessionStore";
 import { computed } from "vue";
 import { MAPPED_ROUTES, CORE_ROUTES } from "@/services/routing/routes";
 import { RouteNames } from "@/services/routing/constants";
-import { Cog8ToothIcon } from "@heroicons/vue/24/outline";
 import { MoonIcon } from "@heroicons/vue/24/outline";
 import { SunIcon } from "@heroicons/vue/24/outline";
-import { UserIcon } from "@heroicons/vue/24/outline";
 import { Bars3Icon } from "@heroicons/vue/24/outline";
 import Link from "@/components/appbar/Link.vue";
 import SiteTitle from "@/components/appbar/SiteTitle.vue";
