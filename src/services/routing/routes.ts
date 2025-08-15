@@ -19,7 +19,7 @@ export const MAPPED_ROUTES: MappedRoutes = {
             meta: [
                 {
                     name: "description",
-                    content: "Brique par brique, continue."
+                    content: "Brique par brique, continue.",
                 },
             ],
         },

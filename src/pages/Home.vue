@@ -1,8 +1,6 @@
 <template>
     <div class="px-6 py-6">
-        <h1 class="text-4xl text-center">
-            Brique par brique, continue.
-        </h1>
+        <h1 class="text-4xl text-center">Brique par brique, continue.</h1>
 
         <ToggleGroup
             v-model="activity"
@@ -25,9 +23,9 @@
         </ToggleGroup>
 
         <div>
-            <RunTab v-if="activity === 'run'"/>
-            <BikeTab v-else-if="activity === 'bike'"/>
-            <SwimTab v-else="activity === 'swim'"/>
+            <RunTab v-if="activity === 'run'" />
+            <BikeTab v-else-if="activity === 'bike'" />
+            <SwimTab v-else="activity === 'swim'" />
         </div>
     </div>
 </template>
@@ -54,6 +52,6 @@ function preventNoSelection(newActivity: Activity) {
 }
 
 function colorSelector(buttonActivity: Activity) {
-    return buttonActivity == activity.value ? "#db143a" : ""; 
+    return buttonActivity == activity.value ? "#db143a" : "";
 }
 </script>

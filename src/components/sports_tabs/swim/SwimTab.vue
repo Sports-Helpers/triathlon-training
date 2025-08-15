@@ -1,7 +1,3 @@
-<template>
-    Enjoy your swimming!
-</template>
+<template>Enjoy your swimming!</template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>

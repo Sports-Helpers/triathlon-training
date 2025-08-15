@@ -132,5 +132,4 @@
 // const mode = ref<Mode>("speed");
 // const unitType = ref<UnitType>("imperial");
 // const inputValue = ref<number | undefined>();
-
 </script>

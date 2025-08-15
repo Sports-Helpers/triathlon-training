@@ -1,7 +1,3 @@
-<template>
-    Enjoy your biking!
-</template>
+<template>Enjoy your biking!</template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
