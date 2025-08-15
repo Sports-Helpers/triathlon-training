@@ -1,5 +1,4 @@
 import { RouteNames, RoutePaths } from "@/services/routing/constants";
-import type { SupportedLocale } from "@/services/i18n/types";
 
 export type RouteNameValue = (typeof RouteNames)[keyof typeof RouteNames];
 
@@ -17,9 +16,7 @@ export type RouteHead = {
 
 export type RouteInfo = {
     name: RouteNameValue;
-    path: {
-        [Locale in SupportedLocale]: RoutePathValue[Locale];
-    };
+    path: RoutePathValue;
     displayedName: string;
     head: RouteHead;
     requiresAuth: boolean;

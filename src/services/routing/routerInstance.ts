@@ -2,7 +2,6 @@ import { createRouter, createWebHistory, type RouteLocationAsPathGeneric, type R
 import { MAPPED_ROUTES } from "@/services/routing/routes";
 import { RouteNames } from "@/services/routing/constants";
 import type { RouteInfo, RouteNameValue } from "@/services/routing/types";
-import type { SupportedLocale } from "@/services/i18n/types";
 import { useUserSessionStore } from "@/stores/user/userSessionStore";
 
 export class RouterInstance {
@@ -15,21 +14,17 @@ export class RouterInstance {
                 return { top: 0 };
             },
 
-            // EXISITNG LIMITATION: Although paths will work regarding of your locale (and be translated accordingly),
-            // a change of language will not update the path of the current page. It will be updated on reload.
-            // Alias path should exist for all supported languages, and all default paths
-            // should be for the same language.
             routes: [
                 {
-                    path: MAPPED_ROUTES[RouteNames.HOME].path.fr,
-                    alias: [MAPPED_ROUTES[RouteNames.HOME].path.fr],
+                    path: MAPPED_ROUTES[RouteNames.HOME].path,
+                    alias: [MAPPED_ROUTES[RouteNames.HOME].path],
                     name: MAPPED_ROUTES[RouteNames.HOME].name,
                     component: () => import("@/pages/Home.vue"),
                     beforeEnter: [],
                 },
                 {
-                    path: MAPPED_ROUTES[RouteNames.NOT_FOUND].path.fr,
-                    alias: [MAPPED_ROUTES[RouteNames.NOT_FOUND].path.fr],
+                    path: MAPPED_ROUTES[RouteNames.NOT_FOUND].path,
+                    alias: [MAPPED_ROUTES[RouteNames.NOT_FOUND].path],
                     name: MAPPED_ROUTES[RouteNames.NOT_FOUND].name,
                     component: () => import("@/pages/NotFound.vue"),
                     beforeEnter: [],
@@ -50,10 +45,10 @@ export class RouterInstance {
             // If this case happens, then either the route was not registered, or this is simply an
             // invalid route. In either case, the user should probably be redirected to an unfound page.
             if (!routeInfo) {
-                return next(this.generateNotFoundLocalizedRoute(userSessionStore.locale));
+                return next(this.generateNotFoundRoute());
             }
 
-            // Redirects to localized home if authentication requirements are not met
+            // Redirects to home if authentication requirements are not met
             if (
                 !this.routeRespectAuthRequirements(
                     userSessionStore.isAuthenticated(),
@@ -61,13 +56,7 @@ export class RouterInstance {
                     routeInfo.hideOnAuth,
                 )
             ) {
-                return next(this.generateInvalidAuthRequirementsRoute(userSessionStore.locale));
-            }
-
-            // Redirects to localized path if user settings and path are incoherent
-            if (!this.routeRespectsLocale(routeInfo, to.path, userSessionStore.locale)) {
-                const route = this.generateValidLocalizedRoute(routeInfo, userSessionStore.locale);
-                return next(route);
+                return next(this.generateInvalidAuthRequirementsRoute());
             }
 
             return next();
@@ -78,10 +67,10 @@ export class RouterInstance {
         return this.router;
     }
 
-    public generateInvalidAuthRequirementsRoute(locale: SupportedLocale): RouteLocationAsPathGeneric | Error {
-        const path = MAPPED_ROUTES[RouteNames.HOME].path[locale];
+    public generateInvalidAuthRequirementsRoute(): RouteLocationAsPathGeneric | Error {
+        const path = MAPPED_ROUTES[RouteNames.HOME].path;
         if (path === undefined) {
-            // TODO: Invalid locale or corrupted routes
+            // TODO: Corrupted routes
             return new Error();
         }
 
@@ -91,44 +80,14 @@ export class RouterInstance {
         };
     }
 
-    public generateNotFoundLocalizedRoute(locale: SupportedLocale): RouteLocationAsPathGeneric | Error {
+    public generateNotFoundRoute(): RouteLocationAsPathGeneric | Error {
         const routeInfo = MAPPED_ROUTES[RouteNames.NOT_FOUND];
-        const path = routeInfo.path[locale];
+        const path = routeInfo.path;
 
         return {
             path: path,
             replace: true,
         };
-    }
-
-    public generateValidLocalizedRoute(
-        routeInfo: RouteInfo,
-        locale: SupportedLocale,
-    ): RouteLocationAsPathGeneric | Error {
-        const path = routeInfo.path[locale];
-        if (path === undefined) {
-            // TODO: Invalid locale or corrupted routeInfo
-            return new Error();
-        }
-
-        return {
-            path: path,
-            replace: true,
-        };
-    }
-
-    public routeRespectsLocale(routeInfo: RouteInfo, path: string, locale: SupportedLocale): boolean | Error {
-        const expectedPath = routeInfo.path[locale];
-        if (expectedPath === undefined) {
-            // TODO: Invalid locale or corrupted routeInfo
-            return new Error();
-        }
-
-        if (path !== expectedPath) {
-            return false;
-        }
-
-        return true;
     }
 
     public routeRespectAuthRequirements(

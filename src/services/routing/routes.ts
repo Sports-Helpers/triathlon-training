@@ -10,16 +10,16 @@ export const MAPPED_ROUTES: MappedRoutes = {
     [RouteNames.HOME]: {
         name: RouteNames.HOME,
         path: RoutePaths.HOME,
-        displayedName: "navigation.home.displayed_name",
+        displayedName: "Tableau de bord",
         requiresAuth: false,
         hideOnAuth: false,
         addToSiteMap: true,
         head: {
-            title: "navigation.home.head_title",
+            title: "Triathlon Training - Tableau de bord",
             meta: [
                 {
                     name: "description",
-                    content: "navigation.home.meta",
+                    content: "Brique par brique, continue."
                 },
             ],
         },
@@ -27,16 +27,16 @@ export const MAPPED_ROUTES: MappedRoutes = {
     [RouteNames.NOT_FOUND]: {
         name: RouteNames.NOT_FOUND,
         path: RoutePaths.NOT_FOUND,
-        displayedName: "navigation.not_found.displayed_name",
+        displayedName: "Oups!",
         requiresAuth: false,
         hideOnAuth: false,
         addToSiteMap: false,
         head: {
-            title: "navigation.not_found.head_title",
+            title: "Triathlon Training - Page introuvable",
             meta: [
                 {
                     name: "description",
-                    content: "navigation.not_found.meta",
+                    content: "La page recherchée n'a pas été trouvée.",
                 },
             ],
         },

@@ -4,12 +4,6 @@ export const RouteNames = {
 } as const;
 
 export const RoutePaths = {
-    HOME: {
-        en: "/",
-        fr: "/",
-    },
-    NOT_FOUND: {
-        en: "/not-found",
-        fr: "/page-introuvable",
-    },
+    HOME: "/",
+    NOT_FOUND: "/page-introuvable",
 } as const;

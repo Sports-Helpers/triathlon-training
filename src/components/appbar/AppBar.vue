@@ -17,8 +17,6 @@
 
             <nav class="appbar-secondary-items">
                 <SecondaryItemIcon @click="userSessionStore.changeTheme(themeService, nextTheme)" :icon="themeIcon" />
-
-                <!--<LanguageMenu />-->
             </nav>
         </div>
     </header>

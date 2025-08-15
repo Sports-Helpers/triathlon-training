@@ -9,7 +9,7 @@
             'appbar-link-not-on-current-page': currentRoute.name != props.routeInfo.name,
         }"
     >
-        {{ $t(props.routeInfo.displayedName) }}
+        {{ props.routeInfo.displayedName }}
     </router-link>
 </template>
 

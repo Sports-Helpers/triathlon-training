@@ -1,16 +1,16 @@
 <template>
     <div class="px-6 py-6">
         <h1 class="text-4xl text-center">
-            {{ $t("navigation.not_found.displayed_name") }}
+            Page introuvable
         </h1>
         <h1 class="text-lg py-3 text-center">
-            {{ $t("pages.not_found.description") }}
+            Brique par brique, continue.
         </h1>
         <div class="text-center">
             <Button class="mx-1" @click="router.push({ name: MAPPED_ROUTES[RouteNames.HOME].name })">
-                {{ $t("pages.not_found.go_home_button") }}
+                Aller au tableau de bord
             </Button>
-            <Button class="mx-1" @click="router.back()"> {{ $t("pages.not_found.go_back_button") }} </Button>
+            <Button class="mx-1" @click="router.back()"> Retourner sur mes pas </Button>
         </div>
     </div>
 </template>
