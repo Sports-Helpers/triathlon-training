@@ -10,11 +10,11 @@
 
                 <SiteTitle displayed-text="Triathlon Training" :route-name="MAPPED_ROUTES[RouteNames.HOME].name" />
             </nav>
-
+            <!--
             <nav class="appbar-links">
                 <Link v-for="route in CORE_ROUTES" :route-info="route" :is-authenticated="isAuthenticated" />
             </nav>
-
+            -->
             <nav class="appbar-secondary-items">
                 <SecondaryItemIcon @click="userSessionStore.changeTheme(themeService, nextTheme)" :icon="themeIcon" />
             </nav>

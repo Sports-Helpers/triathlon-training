@@ -2,7 +2,7 @@
     <div class="w-full max-w-2xl mx-auto space-y-6 mt-6">
         <div class="text-center font-bold">Convertisseur de vitesse et pace de course.</div>
 
-        <Card class="p-6 shadow-card transition-smooth hover:shadow-elegant">
+        <Card class="p-4">
             <div class="space-y-4">
                 <div class="flex items-center gap-2 mb-4">
                     <Button
@@ -24,7 +24,7 @@
 
                     <Button
                         @click="updateUnitType(unitType === 'imperial' ? 'metric' : 'imperial')"
-                        variant="ghost"
+                        variant="outline"
                         size="sm"
                         class="gap-2 h-8 ml-auto"
                     >
@@ -62,35 +62,33 @@
         </Card>
 
         <div v-if="inputResults">
-            <Card
-                class="p-4 shadow-card bg-gradient-accent text-accent-foreground grid grid-cols-1 md:grid-cols-2 gap-4"
-            >
-                <div>
-                    <div class="flex items-center gap-2 mb-3">
+            <Card class="p-4 grid grid-cols-2 gap-4 font-mono">
+                <div class="text-center">
+                    <div class="flex justify-center gap-2 mb-3 font-bold">
                         <ClockIcon class="w-5 h-5" />
-                        <h3 class="font-semibold">Pace</h3>
+                        <h3>Pace</h3>
                     </div>
                     <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span class="font-mono font-bold"> {{ inputResults.metric.pace }}/km</span>
+                        <div>
+                            <span> {{ inputResults.metric.pace }}/km</span>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="font-mono font-bold">{{ inputResults.imperial.pace }}/mile</span>
+                        <div>
+                            <span>{{ inputResults.imperial.pace }}/mile</span>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div class="flex items-center gap-2 mb-3">
+                <div class="text-center">
+                    <div class="flex justify-center gap-2 mb-3 font-bold">
                         <BoltIcon class="w-5 h-5" />
-                        <h3 class="font-semibold">Vitesse</h3>
+                        <h3>Vitesse</h3>
                     </div>
                     <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span class="font-mono font-bold"> {{ inputResults.metric.speed }} km/h </span>
+                        <div>
+                            <span> {{ inputResults.metric.speed }} km/h </span>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="font-mono font-bold"> {{ inputResults.imperial.speed }} mph </span>
+                        <div>
+                            <span> {{ inputResults.imperial.speed }} mph </span>
                         </div>
                     </div>
                 </div>
