@@ -26,15 +26,15 @@
 <script setup lang="ts">
 import { useUserSessionStore } from "@/stores/user/userSessionStore";
 import { computed } from "vue";
-import { MAPPED_ROUTES, CORE_ROUTES } from "@/services/routing/routes";
+import { MAPPED_ROUTES /*CORE_ROUTES*/ } from "@/services/routing/routes";
 import { RouteNames } from "@/services/routing/constants";
 import { MoonIcon } from "@heroicons/vue/24/outline";
 import { SunIcon } from "@heroicons/vue/24/outline";
-import { Bars3Icon } from "@heroicons/vue/24/outline";
-import Link from "@/components/appbar/Link.vue";
+//import { Bars3Icon } from "@heroicons/vue/24/outline";
+//import Link from "@/components/appbar/Link.vue";
 import SiteTitle from "@/components/appbar/SiteTitle.vue";
-import DrawerTrigger from "@/components/ui/drawer/DrawerTrigger.vue";
-import AppBarDrawer from "@/components/appbar/AppBarDrawer.vue";
+//import DrawerTrigger from "@/components/ui/drawer/DrawerTrigger.vue";
+//import AppBarDrawer from "@/components/appbar/AppBarDrawer.vue";
 import SecondaryItemIcon from "@/components/appbar/SecondaryItemIcon.vue";
 import { SUPPORTED_THEMES } from "@/services/themes/constants";
 import { useThemeService } from "@/services/themes/themeService";
@@ -42,7 +42,7 @@ import { useThemeService } from "@/services/themes/themeService";
 const userSessionStore = useUserSessionStore();
 const themeService = useThemeService();
 
-const isAuthenticated = computed(() => userSessionStore.isAuthenticated());
+//const isAuthenticated = computed(() => userSessionStore.isAuthenticated());
 const isDarkTheme = computed(() => userSessionStore.isDarkTheme());
 const themeIcon = computed(() => (isDarkTheme.value ? SunIcon : MoonIcon));
 
