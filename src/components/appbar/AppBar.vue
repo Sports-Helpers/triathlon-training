@@ -2,12 +2,13 @@
     <header class="header">
         <div class="appbar-container">
             <nav class="appbar-main">
+                <!--
                 <AppBarDrawer :is-authenticated="isAuthenticated">
                     <DrawerTrigger>
                         <SecondaryItemIcon id="hamburger" class="md:hidden" @click="" :icon="Bars3Icon" />
                     </DrawerTrigger>
                 </AppBarDrawer>
-
+                -->
                 <SiteTitle displayed-text="Triathlon Training" :route-name="MAPPED_ROUTES[RouteNames.HOME].name" />
             </nav>
             <!--

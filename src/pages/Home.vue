@@ -1,9 +1,5 @@
 <template>
     <div class="px-6 py-6">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-hero bg-clip-text text-transparent">
-            Brique par brique, continue.
-        </h2>
-
         <h1
             class="text-4xl font-bold bg-gradient-to-r from-primary to-[#2563eb] text-center bg-clip-text text-transparent"
         >
