@@ -1,6 +1,14 @@
 <template>
     <div class="px-6 py-6">
-        <h1 class="text-4xl text-center">Brique par brique, continue.</h1>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-hero bg-clip-text text-transparent">
+            Brique par brique, continue.
+        </h2>
+
+        <h1
+            class="text-4xl font-bold bg-gradient-to-r from-primary to-[#2563eb] text-center bg-clip-text text-transparent"
+        >
+            Brique par brique, continue.
+        </h1>
 
         <ToggleGroup
             v-model="activity"
@@ -8,16 +16,17 @@
             type="single"
             class="mx-auto mt-4"
             size="lg"
+            variant="outline"
         >
-            <ToggleGroupItem class="w-27" value="run" aria-label="Toggle running">
+            <ToggleGroupItem class="w-27" value="run" aria-label="Toggle running" variant="outline">
                 <Footprints :color="colorSelector('run')" />
             </ToggleGroupItem>
 
-            <ToggleGroupItem class="w-27" value="bike" aria-label="Toggle bike">
+            <ToggleGroupItem class="w-27" value="bike" aria-label="Toggle bike" variant="outline">
                 <Bike :color="colorSelector('bike')" />
             </ToggleGroupItem>
 
-            <ToggleGroupItem class="w-27" value="swim" aria-label="Toggle swim">
+            <ToggleGroupItem class="w-27" value="swim" aria-label="Toggle swim" variant="outline">
                 <Waves :color="colorSelector('swim')" />
             </ToggleGroupItem>
         </ToggleGroup>
@@ -52,6 +61,6 @@ function preventNoSelection(newActivity: Activity) {
 }
 
 function colorSelector(buttonActivity: Activity) {
-    return buttonActivity == activity.value ? "#db143a" : "";
+    return buttonActivity == activity.value ? "" : "";
 }
 </script>

@@ -3,7 +3,7 @@ import App from "@/App.vue";
 import { ROUTING_SERVICE_KEY, RoutingService } from "@/services/routing/routingService";
 import { createPinia } from "pinia";
 import piniaPluginPersistedState from "pinia-plugin-persistedstate";
-import "@/assets/styles.css";
+import "@/assets/global.css";
 import { createHead } from "@unhead/vue/client";
 import { THEME_SERVICE_KEY, ThemeService } from "@/services/themes/themeService";
 import { RouterInstance } from "@/services/routing/routerInstance";

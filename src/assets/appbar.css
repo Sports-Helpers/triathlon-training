@@ -1,3 +1,5 @@
+@import "./styles.css";
+
 /*
     Phones
 */
@@ -45,7 +47,7 @@
 
 .appbar-link-site-title {
     @apply font-semibold text-lg;
-    color: #db143a;
+    color: var(--primary);
 }
 
 .appbar-secondary-items {
